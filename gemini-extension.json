@@ -1,0 +1,34 @@
+{
+  "name": "gemini-diary",
+  "version": "1.0.0",
+  "description": "A long-term memory extension for Gemini CLI that learns from your activity.",
+  "contextFileName": "GEMINI.md",
+  "hooks": {
+    "AfterModel": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "record-interaction",
+            "type": "command",
+            "command": "node ${extensionPath}/hooks/record.js",
+            "description": "Record interaction for auto-diary"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "exit|logout",
+        "hooks": [
+          {
+            "name": "auto-diary",
+            "type": "command",
+            "command": "node ${extensionPath}/hooks/auto-diary.js",
+            "description": "Auto-generate diary entry at the end of the session"
+          }
+        ]
+      }
+    ]
+  }
+}

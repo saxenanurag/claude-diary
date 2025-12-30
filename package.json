@@ -1,0 +1,12 @@
+{
+  "name": "gemini-diary",
+  "version": "1.0.0",
+  "description": "Gemini CLI extension for long-term memory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.0"
+  }
+}
