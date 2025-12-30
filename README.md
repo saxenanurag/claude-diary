@@ -48,3 +48,9 @@ The extension automatically records your session interactions and generates a di
 ## Configuration
 
 The extension uses `~/.gemini/memory/` to store diary entries and reflections. You can customize the behavior by editing the scripts in `hooks/`.
+
+## Attribution & Motivation
+
+This project is a port of [Claude Diary](https://github.com/rlancemartin/claude-diary) by [Lance Martin](https://github.com/rlancemartin).
+
+The concept is inspired by [an interview between Dan Shipper and Cat Wu / Boris Cherny from the Claude Code team](https://www.youtube.com/watch?v=IDSAMqip6ms&t=352s), where they discussed manually creating diary entries and reflecting on them. The approach also draws ideas from the [Generative Agents paper](https://arxiv.org/pdf/2304.03442), utilizing a memory architecture of Observations (Diary), Reflection (Pattern Analysis), and Retrieval (Context Loading).
